@@ -103,6 +103,11 @@ namespace DiscordGameStatus
             // destination running executable
             string destination = $"{Environment.CurrentDirectory}\\{_activeGame}.exe";
 
+            // do nothing, already active
+            if(source == destination)
+            {
+                return;
+            }
 
             // create new executible (see README.md)
             File.Copy(source, destination, true);
