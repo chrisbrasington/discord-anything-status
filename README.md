@@ -2,6 +2,8 @@
 
 This is real quickly hacked together.
 
+![Alt text](Images/status1.png "")
+
 Program will launch as "Discrod Game Status". Do NOT add this to discord's activity status.
 First, set the active game by either the dropdown or the input textbox and clicking GO.
 
