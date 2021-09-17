@@ -98,16 +98,16 @@ namespace DiscordGameStatus
                 _activeGame = comboBox.SelectedItem.ToString();
             }
 
+            // do nothing, already active
+            if (System.Diagnostics.Process.GetCurrentProcess().ProcessName == _activeGame)
+            {
+                return;
+            }
+
             // source running executable
             string source = $"{Environment.CurrentDirectory}\\DiscordGameStatus.exe";
             // destination running executable
             string destination = $"{Environment.CurrentDirectory}\\{_activeGame}.exe";
-
-            // do nothing, already active
-            if(source == destination)
-            {
-                return;
-            }
 
             // create new executible (see README.md)
             File.Copy(source, destination, true);
